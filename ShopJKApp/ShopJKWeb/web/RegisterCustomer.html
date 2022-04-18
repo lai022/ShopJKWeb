@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Customer Registration</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input[type=submit], #cancel-btn {
+                width: 100%;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]{
+                background-color: #4CAF50;
+                color: white;
+            }
+            #cancel-btn{
+                background-color: #fc7f03;
+                color: white;
+            }
+
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+                color: black;
+            }
+
+            #cancel-btn:hover {
+                background-color: #cc6600;
+                color: black;
+            }
+
+            table{
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 50%;
+
+            }
+            th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #125b80;
+                color: white;
+            }
+
+            td{
+                padding: 15px 20px 15px 20px;
+                text-align: center;
+                background-color: #f7fdff;
+            }
+
+            input[type=text],input[type=tel],input[type=email],input[type=password], input[type=date]{
+                width: 100%;
+                height: 100%;
+                background-color: #e9eff0;
+                border-color: white;
+            }
+
+
+            textarea {
+                resize: none;
+                width: 100%;
+                height: 100%;
+                background-color: #e9eff0;
+
+            }
+
+            input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,input[type=password]:focus,textarea:focus{
+                outline: 3px solid lightskyblue;   
+            }
+
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="ProcessRegisterCustomer">
+            <table border="1" align="center" style="margin-top:100px">
+                <thead>
+                    <tr>
+                        <th style="border-collapse:collapse" colspan="2">Registration an account</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td>Username:</td>
+                        <td><input type="text" name="newCustUserName" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Customer Name:</td>
+                        <td><input type="text" name="newCustName" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>D.O.B (MM/DD/YYYY):</td>
+                        <td><input type="date" name="newDOB" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Phone Number: (XXX-XXXXX)</td>
+                        <td><input type="tel" name="newPhoneNo" placeholder="XXX-XXXXX" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Email:</td>
+                        <td><input type="email" name="newEmail" placeholder="XXX@gmail.com" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea name="newAddress" rows="6" cols="20" placeholder="Place your address here" required></textarea></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="newPwd" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Confirm Password:</td>
+                        <td><input type="password" name="newConfirmPwd" required></td>
+                    </tr>
+                    
+                    <tr>
+                         
+                        <td ><input type="submit" value="Register" style="width:100%"></td>
+                        <td ><button type="button" id="cancel-btn" style="width:100%" onclick="location.href='index.html' ">Cancel</button></td>
+                    </tr>
+                </tbody>
+                
+            </table>
+            <input type="hidden" name="newCustStatus" value="A">
+        </form>
+            
+            
+    </body>
+</html>

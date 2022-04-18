@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Customer Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            input[type=submit], #cancel-btn {
+                width: 100%;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]{
+                background-color: #4CAF50;
+                color: white;
+            }
+            #cancel-btn{
+                background-color: #fc7f03;
+                color: white;
+            }
+
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+                color: black;
+            }
+
+            #cancel-btn:hover {
+                background-color: #cc6600;
+                color: black;
+            }
+
+            table{
+                font-family: Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 50%;
+            }
+            th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color: #125b80;
+                color: white;
+            }
+
+            td{
+                padding: 15px 20px 15px 20px;
+                text-align: center;
+                background-color: #f7fdff;
+            }
+
+            input[type=text],input[type=tel],input[type=email],input[type=password]{
+                width: 100%;
+                height: 100%;
+                background-color: #e9eff0;
+                border-color: white;
+            }
+
+
+            textarea {
+                resize: none;
+                width: 100%;
+                height: 100%;
+                background-color: #e9eff0;
+
+            }
+
+            input[type=text]:focus,input[type=tel]:focus,input[type=email]:focus,input[type=password]:focus,textarea:focus{
+                outline: 3px solid lightskyblue;   
+            }
+            
+            #customer-tab{
+                background-color: lightcoral;
+                color:black;
+
+            }
+
+            #staff-tab{
+                background-color: lightslategrey;
+                color:black;
+                text-decoration: none;
+            }
+            
+            #customer-tab:hover,#staff-tab:hover{
+                background-color: black;
+                cursor: pointer;
+                color:white;
+            }
+            
+            #logo{
+                width: 80%;
+                height: 300px;
+                border-radius: 20px;
+            }
+            
+            #reg{
+                text-decoration:none; 
+                color:black;
+            }
+            #reg:hover{
+                cursor:pointer;
+                color: green;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="POST" action="ProcessCustomerLogin">
+            <table border="1" align="center" style="margin-top:30px">
+                <thead >
+                    <tr>
+                        <th id="customer-tab">Customer</th>
+                        <th id="staff-tab"><a href="secureStaff/StaffLogin.html" style="text-decoration:none; color:white">Staff</a></th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td colspan="2"><img src="logo.png" alt="logo of shop jk" id="logo"></td>                       
+                    </tr>
+                    
+                    <tr>
+                        <td>Username<font color = "#FF0000">*</font></td>
+                        <td><input type="text" name="custUserName" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Password<font color = "#FF0000">*</font></td>
+                        <td><input type="password" name="custPassword" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2">
+                            <font color = "#FF0000">* required fields</font>                         
+                        </td>                      
+                    </tr>
+                    
+                    <tr>
+                        <td colspan="2"><input type="submit" style="text-align: center;width: 100%" value="Login"></td>                                        
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td colspan="2"><a href="RegisterCustomer.html" id="reg">New to here? Hurry up click here to register for an account!</a></td>
+                    </tr>
+                    
+                    
+                </tbody>
+                
+            </table>
+            
+        </form>
+          
+    </body>
+</html>
