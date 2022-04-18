@@ -1,8 +1,13 @@
 Final Diploma Assignment
 
 Contributors
--AGYW
--SSM
--HYC
--TES
--LSK
+
+- AGYW
+
+- SSM
+
+- HYC
+
+- TES
+
+- LSK
